@@ -4,7 +4,57 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@Model.GetViewModel().Weather.
+<form method="Post">
+    <div class="form-group">
+        <label asp-for="GetViewModel().Weather"></label>
+        <select class="form-control">
+            <option value="Dinalupihan">Dinalupihan </option>
+            <option value="Dinalupihan">Olongapo City </option>
+            <option value="Dinalupihan">Angeles City</option>
+            <option value="Dinalupihan">Davao City</option>
+
+        </select>
+    </div>0
+
+    <div class="card" style="width: 18rem;">
+   <div class="card-header">
+     Featured
+   </div>
+     <ul class="list-group list-group-flush">
+            <li class="list-group-item">Name of Location</li>
+            <li class="list-group-item">Icon</li>
+            <li class="list-group-item">Main</li>
+            <li class="list-group-item">Description</li>
+            <li class="list-group-item">Main.Temp</li>
+            <li class="list-group-item">Main.Pressure</li>
+            <li class="list-group-item">Main.FeelsLike</li>
+            <li class="list-group-item">Main.Humidity</li>
+
+        </ul>
 </div>
+
+    <div class="col-lg-1">
+            <label for="nameoflocation">Dinalupihan</label>
+            <input type="text" id="lat" name="lat" value="14.8781"><br><br>
+            <input type="text" id="lon" name="lon" value=" 120.4546"><br><br>
+        </div>
+
+    <div class="col-lg-1">
+        <label for="nameoflocation">Olongapo City</label>
+        <input type="text" id="lat" name="lat" value=" 14.8386"><br><br>
+        <input type="text" id="lon" name="lon" value="14.8386"><br><br>
+    </div>
+
+    <div class="col-lg-1">
+        <label for="nameoflocation">Angeles City</label>
+        <input type="text" id="lat" name="lat" value="15.1450"><br><br>
+        <input type="text" id="lon" name="lon" value=" 15.1450"><br><br>
+    </div>
+    <div class="col-lg-1">
+        <label for="nameoflocation">Davao City</label>
+        <input type="text" id="lat" name="lat" value="7.1907"><br><br>
+        <input type="text" id="lon" name="lon" value=" 7.1907"><br><br>
+    </div>
+
+</form>
